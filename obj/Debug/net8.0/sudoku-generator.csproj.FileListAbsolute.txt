@@ -1,0 +1,4 @@
+C:\Users\sofus\GETPrepared\sudoku-generator\obj\Debug\net8.0\sudoku-generator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sofus\GETPrepared\sudoku-generator\obj\Debug\net8.0\sudoku-generator.AssemblyInfoInputs.cache
+C:\Users\sofus\GETPrepared\sudoku-generator\obj\Debug\net8.0\sudoku-generator.AssemblyInfo.cs
+C:\Users\sofus\GETPrepared\sudoku-generator\obj\Debug\net8.0\sudoku-generator.csproj.CoreCompileInputs.cache
