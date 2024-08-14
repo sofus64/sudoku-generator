@@ -4,7 +4,9 @@
     {
         static void Main(string[] args)
         {
-            
+            var sudoku = new Sudoku();
+            sudoku.GenerateBoard();
+            sudoku.PrintGrid();
         }
     }
 }
