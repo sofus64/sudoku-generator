@@ -7,16 +7,16 @@
       "RelativeMoniker": "D:0:0:{1B20B3E4-16C5-4D1D-BC3A-D40C96D53107}|sudoku-generator.csproj|solutionrelative:sudoku.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1B20B3E4-16C5-4D1D-BC3A-D40C96D53107}|sudoku-generator.csproj|c:\\users\\sofus\\getprepared\\sudoku-generator\\myrandom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1B20B3E4-16C5-4D1D-BC3A-D40C96D53107}|sudoku-generator.csproj|solutionrelative:myrandom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1B20B3E4-16C5-4D1D-BC3A-D40C96D53107}|sudoku-generator.csproj|c:\\users\\sofus\\getprepared\\sudoku-generator\\readme.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{1B20B3E4-16C5-4D1D-BC3A-D40C96D53107}|sudoku-generator.csproj|solutionrelative:readme.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1B20B3E4-16C5-4D1D-BC3A-D40C96D53107}|sudoku-generator.csproj|c:\\users\\sofus\\getprepared\\sudoku-generator\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1B20B3E4-16C5-4D1D-BC3A-D40C96D53107}|sudoku-generator.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1B20B3E4-16C5-4D1D-BC3A-D40C96D53107}|sudoku-generator.csproj|c:\\users\\sofus\\getprepared\\sudoku-generator\\readme.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{1B20B3E4-16C5-4D1D-BC3A-D40C96D53107}|sudoku-generator.csproj|solutionrelative:readme.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{1B20B3E4-16C5-4D1D-BC3A-D40C96D53107}|sudoku-generator.csproj|c:\\users\\sofus\\getprepared\\sudoku-generator\\myrandom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B20B3E4-16C5-4D1D-BC3A-D40C96D53107}|sudoku-generator.csproj|solutionrelative:myrandom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -48,7 +48,7 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\sofus\\GETPrepared\\sudoku-generator\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAjAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-13T11:35:16.425Z",
               "EditorCaption": ""
@@ -61,14 +61,14 @@
               "RelativeDocumentMoniker": "Sudoku.cs",
               "ToolTip": "C:\\Users\\sofus\\GETPrepared\\sudoku-generator\\Sudoku.cs",
               "RelativeToolTip": "Sudoku.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFgAAAAAAAAA",
+              "ViewState": "AQIAAH8AAAAAAAAAAAAawJAAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-13T12:32:08.852Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "MyRandom.cs",
               "DocumentMoniker": "C:\\Users\\sofus\\GETPrepared\\sudoku-generator\\MyRandom.cs",
               "RelativeDocumentMoniker": "MyRandom.cs",
@@ -81,13 +81,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "README.txt",
               "DocumentMoniker": "C:\\Users\\sofus\\GETPrepared\\sudoku-generator\\README.txt",
               "RelativeDocumentMoniker": "README.txt",
               "ToolTip": "C:\\Users\\sofus\\GETPrepared\\sudoku-generator\\README.txt",
               "RelativeToolTip": "README.txt",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAA0AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
               "WhenOpened": "2024-08-13T12:45:40.313Z",
               "EditorCaption": ""
