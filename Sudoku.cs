@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -23,6 +24,24 @@ namespace sudoku_generator
         public void GenerateBoard()
         {
             FillDiagonal();
+            FillRestOfBoard();
+        }
+
+        private void FillBox(int rowStartIndex, int colStartIndex)
+        {
+            for (int boxRowIndex = 0; boxRowIndex < _boxSize; boxRowIndex++)
+            {
+                for (int boxColIndex = 0; boxColIndex < _boxSize; boxColIndex++)
+                {
+                    int number;
+                    do
+                    {
+                        number = MyRandom.RandomNumber(_size);
+                    }
+                    while (IsNumberUsedInBox(rowStartIndex, colStartIndex, number));
+                    _board[rowStartIndex + boxRowIndex, colStartIndex + boxColIndex] = number;
+                }
+            }
         }
 
         private void FillDiagonal()
@@ -33,30 +52,52 @@ namespace sudoku_generator
             }
         }
 
-        private void FillBox(int rowStartIndex, int colStartIndex)
+        private bool FillRestOfBoard(int rowIndex = 0, int colIndex = 0)
         {
-            for (int i = 0; i < _boxSize; i++)
+            bool NextCell()
             {
-                for (int j = 0; j < _boxSize; j++)
+                return FillRestOfBoard(rowIndex, colIndex + 1);
+            }
+
+            if (rowIndex == _size - 1 && colIndex == _size)
+            {
+                return true;
+            }
+
+            if (colIndex == _size)
+            {
+                rowIndex++;
+                colIndex = 0;
+            }
+
+            if (_board[rowIndex, colIndex] != 0)
+            {
+                return NextCell();
+            }
+
+            for (int number = 1; number <= _size; number++)
+            {
+                if (IsValidNumberForCell(rowIndex, colIndex, number))
                 {
-                    int number;
-                    do
+                    _board[rowIndex, colIndex] = number;
+                    if (NextCell())
                     {
-                        number = MyRandom.RandomNumber(_size);
+                        return true;
                     }
-                    while (IsNumberUsedInBox(rowStartIndex, colStartIndex, number));
-                    _board[rowStartIndex + i, colStartIndex + j] = number;
+                    _board[rowIndex, colIndex] = 0;
                 }
             }
+
+            return false;
         }
 
         private bool IsNumberUsedInBox(int rowStartIndex, int colStartIndex, int number)
         {
-            for (int i = 0; i < _boxSize; i++)
+            for (int boxRowIndex = 0; boxRowIndex < _boxSize; boxRowIndex++)
             {
-                for (int j = 0; j < _boxSize; j++)
+                for (int boxColIndex = 0; boxColIndex < _boxSize; boxColIndex++)
                 {
-                    if (_board[rowStartIndex + i, colStartIndex + j] == number) return true;
+                    if (_board[rowStartIndex + boxRowIndex, colStartIndex + boxColIndex] == number) return true;
                 }
             }
             return false;
@@ -82,8 +123,8 @@ namespace sudoku_generator
 
         private bool IsValidNumberForCell(int rowIndex, int colIndex, int number)
         {
-            return (IsNumberUsedInRow(rowIndex, number) &&
-                    IsNumberUsedInRow(rowIndex, number) &&
+            return !(IsNumberUsedInRow(rowIndex, number) ||
+                    IsNumberUsedInCol(colIndex, number) ||
                     IsNumberUsedInBox(rowIndex - rowIndex % _boxSize, colIndex - colIndex % _boxSize, number));
         }
 
@@ -105,11 +146,11 @@ namespace sudoku_generator
                 Console.WriteLine();
             }
         }
-
-        private HashSet<int[,]> FindSolutions()
-        {
-            HashSet<int[,]> solutions = new();
-            return solutions;
-        }
+        // Idea for later: run a check to see if a board has multiple solutions
+        //private HashSet<int[,]> FindSolutions()
+        //{
+        //    HashSet<int[,]> solutions = new();
+        //    return solutions;
+        //}
     }
 }
