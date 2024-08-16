@@ -91,6 +91,53 @@ namespace sudoku_generator
             return false;
         }
 
+        private void FillDiagonal()
+        {
+            for (int i = 0; i < _size; i += _boxSize)
+            {
+                FillBox(i, i);
+            }
+        }
+
+        private bool FillRestOfBoard(int rowIndex = 0, int colIndex = 0)
+        {
+            bool NextCell()
+            {
+                return FillRestOfBoard(rowIndex, colIndex + 1);
+            }
+
+            if (rowIndex == _size - 1 && colIndex == _size)
+            {
+                return true;
+            }
+
+            if (colIndex == _size)
+            {
+                rowIndex++;
+                colIndex = 0;
+            }
+
+            if (_board[rowIndex, colIndex] != 0)
+            {
+                return NextCell();
+            }
+
+            for (int number = 1; number <= _size; number++)
+            {
+                if (IsValidNumberForCell(rowIndex, colIndex, number))
+                {
+                    _board[rowIndex, colIndex] = number;
+                    if (NextCell())
+                    {
+                        return true;
+                    }
+                    _board[rowIndex, colIndex] = 0;
+                }
+            }
+
+            return false;
+        }
+
         private bool IsNumberUsedInBox(int rowStartIndex, int colStartIndex, int number)
         {
             for (int boxRowIndex = 0; boxRowIndex < _boxSize; boxRowIndex++)
